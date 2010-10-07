@@ -1,4 +1,6 @@
 Artart::Application.routes.draw do
+  devise_for :users
+
   resources :gallery_items
 
   resources :galleries

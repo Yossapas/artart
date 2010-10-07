@@ -1,16 +1,9 @@
 <%= form_for @gallery do |f| %>
   <%= f.error_messages %>
-  <p>
-    <%= f.label :name %><br />
-    <%= f.text_field :name %>
-  </p>
-  <p>
-    <%= f.label :galleriable_id %><br />
-    <%= f.text_field :galleriable_id %>
-  </p>
-  <p>
-    <%= f.label :galleriable_type %><br />
-    <%= f.text_field :galleriable_type %>
-  </p>
+  
   <p><%= f.submit %></p>
+  
+  <%= f.hidden_field :name %>
+  <%= f.hidden_field :galleriable_id %>
+  <%= f.hidden_field :galleriable_type %>
 <% end %>

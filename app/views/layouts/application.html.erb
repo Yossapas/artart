@@ -13,6 +13,15 @@
         <%= content_tag :div, msg, :id => "flash_#{name}" %>
       <% end %>
       
+      <div id="user_nav">
+        <% if user_signed_in? %>
+          Signed in as <%= current_user.email %>. Not you?
+          <%= link_to "Sign out", destroy_user_session_path %>
+        <% else %>
+          <%= link_to "Sign up", new_user_registration_path %> or <%= link_to "sign in", new_user_session_path %>
+        <% end %>
+      </div>
+      
       <ul>
         <li><%= link_to "Hotel", hotels_path %></li>
         <li><%= link_to "HotelFeature", hotel_features_path %></li>
@@ -22,6 +31,8 @@
         <li><%= link_to "RoomTypeFeaturing", room_type_featurings_path %></li>
         <li><%= link_to "Room", rooms_path %></li>
         <li><%= link_to "RoomAvailableDate", room_available_dates_path %></li>
+        <li><%= link_to "Gallery", galleries_path %></li>
+        <li><%= link_to "GalleryItem", gallery_items_path %></li>
       </ul>
       
       <%= content_tag :h1, yield(:title) if show_title? %>

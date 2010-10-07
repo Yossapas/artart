@@ -15,7 +15,7 @@ class GalleryItemsController < ApplicationController
     @gallery_item = GalleryItem.new(params[:gallery_item])
     if @gallery_item.save
       flash[:notice] = "Successfully created gallery item."
-      redirect_to @gallery_item
+      redirect_to @gallery_item.gallery
     else
       render :action => 'new'
     end
@@ -36,9 +36,10 @@ class GalleryItemsController < ApplicationController
   end
   
   def destroy
+    @gallery = @gallery_item.gallery
     @gallery_item = GalleryItem.find(params[:id])
     @gallery_item.destroy
     flash[:notice] = "Successfully destroyed gallery item."
-    redirect_to gallery_items_url
+    redirect_to @gallery
   end
 end

@@ -5,6 +5,7 @@ class GalleriesController < ApplicationController
   
   def show
     @gallery = Gallery.find(params[:id])
+    @gallery_item = @gallery.gallery_items.new
   end
   
   def new
@@ -15,7 +16,7 @@ class GalleriesController < ApplicationController
     @gallery = Gallery.new(params[:gallery])
     if @gallery.save
       flash[:notice] = "Successfully created gallery."
-      redirect_to @gallery
+      redirect_to @gallery.galleriable
     else
       render :action => 'new'
     end

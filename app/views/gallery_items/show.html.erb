@@ -8,6 +8,10 @@
   <strong>Gallery:</strong>
   <%= @gallery_item.gallery_id %>
 </p>
+<p>
+  <strong>Photo:</strong>
+  <%= image_tag @gallery_item.photo.url(:small) %>
+</p>
 
 <p>
   <%= link_to "Edit", edit_gallery_item_path(@gallery_item) %> |

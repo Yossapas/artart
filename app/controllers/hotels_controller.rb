@@ -5,6 +5,13 @@ class HotelsController < ApplicationController
   
   def show
     @hotel = Hotel.find(params[:id])
+    if !@hotel.gallery
+      @gallery = Gallery.new
+      @gallery.galleriable = @hotel
+      @gallery.name = "#{@hotel.name}'s Gallery"
+      @gallery.save
+      @hotel = Hotel.find(params[:id])
+    end    
   end
   
   def new

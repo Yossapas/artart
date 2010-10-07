@@ -13,6 +13,15 @@
   <%= @gallery.galleriable_type %>
 </p>
 
+<% @gallery.gallery_items.each do |gallery_item| %>
+
+  <%= image_tag gallery_item.photo.url(:small) %>
+
+<% end %>
+
+<h4>Add Photo</h4>
+<%= render :partial => '/gallery_items/form' %>
+
 <p>
   <%= link_to "Edit", edit_gallery_path(@gallery) %> |
   <%= link_to "Destroy", @gallery, :confirm => 'Are you sure?', :method => :delete %> |
