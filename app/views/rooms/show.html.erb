@@ -1,0 +1,16 @@
+<% title "Room" %>
+
+<p>
+  <strong>Price:</strong>
+  <%= @room.price %>
+</p>
+<p>
+  <strong>Room Type:</strong>
+  <%= @room.room_type_id %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_room_path(@room) %> |
+  <%= link_to "Destroy", @room, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", rooms_path %>
+</p>

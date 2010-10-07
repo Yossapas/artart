@@ -1,0 +1,12 @@
+<%= form_for @room_type_featuring do |f| %>
+  <%= f.error_messages %>
+  <p>
+    <%= f.label :room_type_id %><br />
+    <%= f.text_field :room_type_id %>
+  </p>
+  <p>
+    <%= f.label :room_type_feature_id %><br />
+    <%= f.text_field :room_type_feature_id %>
+  </p>
+  <p><%= f.submit %></p>
+<% end %>

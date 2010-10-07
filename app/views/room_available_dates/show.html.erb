@@ -1,0 +1,20 @@
+<% title "Room Available Date" %>
+
+<p>
+  <strong>Room:</strong>
+  <%= @room_available_date.room_id %>
+</p>
+<p>
+  <strong>Begin At:</strong>
+  <%= @room_available_date.begin_at %>
+</p>
+<p>
+  <strong>End At:</strong>
+  <%= @room_available_date.end_at %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_room_available_date_path(@room_available_date) %> |
+  <%= link_to "Destroy", @room_available_date, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", room_available_dates_path %>
+</p>

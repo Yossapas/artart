@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= content_for?(:title) ? yield(:title) : "Untitled" %></title>
+    <%= stylesheet_link_tag "application" %>
+    <%= javascript_include_tag :defaults %>
+    <%= csrf_meta_tag %>
+    <%= yield(:head) %>
+  </head>
+  <body>
+    <div id="container">
+      <% flash.each do |name, msg| %>
+        <%= content_tag :div, msg, :id => "flash_#{name}" %>
+      <% end %>
+      
+      <ul>
+        <li><%= link_to "Hotel", hotels_path %></li>
+        <li><%= link_to "HotelFeature", hotel_features_path %></li>
+        <li><%= link_to "HotelFeaturing", hotel_featurings_path %></li>
+        <li><%= link_to "RoomType", room_types_path %></li>
+        <li><%= link_to "RoomTypeFeature", room_type_features_path %></li>
+        <li><%= link_to "RoomTypeFeaturing", room_type_featurings_path %></li>
+        <li><%= link_to "Room", rooms_path %></li>
+        <li><%= link_to "RoomAvailableDate", room_available_dates_path %></li>
+      </ul>
+      
+      <%= content_tag :h1, yield(:title) if show_title? %>
+      <%= yield %>
+    </div>
+  </body>
+</html>

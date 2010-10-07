@@ -1,0 +1,25 @@
+one:
+  name: MyString
+  star: 1
+  description: MyText
+  detail: MyText
+  address: MyString
+  website: MyString
+  email: MyString
+  phone: MyString
+  fax: MyString
+  longitude: 1.5
+  latitude: 1.5
+
+two:
+  name: MyString
+  star: 1
+  description: MyText
+  detail: MyText
+  address: MyString
+  website: MyString
+  email: MyString
+  phone: MyString
+  fax: MyString
+  longitude: 1.5
+  latitude: 1.5

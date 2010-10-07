@@ -1,0 +1,2 @@
+module HotelFeaturingsHelper
+end

@@ -1,0 +1,10 @@
+HotelId : <%= hotel_featuring.hotel_id %><br />
+HotelFeatureId : <%= hotel_featuring.hotel_feature_id %>
+
+<p>
+  <%= link_to "Show", hotel_featuring %>
+  <%= link_to "Edit", edit_hotel_featuring_path(hotel_featuring) %>
+  <%= link_to "Destroy", hotel_featuring, :confirm => 'Are you sure?', :method => :delete %>
+</p>
+
+<hr />

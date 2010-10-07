@@ -1,0 +1,7 @@
+one:
+  price: 9.99
+  room_type_id: 1
+
+two:
+  price: 9.99
+  room_type_id: 1

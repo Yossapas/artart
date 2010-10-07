@@ -1,0 +1,12 @@
+<% title "Room Type Feature" %>
+
+<p>
+  <strong>Name:</strong>
+  <%= @room_type_feature.name %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_room_type_feature_path(@room_type_feature) %> |
+  <%= link_to "Destroy", @room_type_feature, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", room_type_features_path %>
+</p>

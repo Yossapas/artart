@@ -1,0 +1,12 @@
+<%= form_for @hotel_featuring do |f| %>
+  <%= f.error_messages %>
+  <p>
+    <%= f.label :hotel_id %><br />
+    <%= f.text_field :hotel_id %>
+  </p>
+  <p>
+    <%= f.label :hotel_feature_id %><br />
+    <%= f.text_field :hotel_feature_id %>
+  </p>
+  <p><%= f.submit %></p>
+<% end %>

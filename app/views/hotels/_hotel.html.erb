@@ -1,0 +1,12 @@
+<h2><%= hotel.name %></h2>
+<b>Star : </b> <%= hotel.star %>
+<b>Phone : </b> <%= hotel.phone %>
+
+<p>
+  <%= hotel.description %><br />
+  <%= link_to "Show", hotel %> | 
+  <%= link_to "Edit", edit_hotel_path(hotel) %> | 
+  <%= link_to "Destroy", hotel, :confirm => 'Are you sure?', :method => :delete %>
+</p>
+
+<hr />

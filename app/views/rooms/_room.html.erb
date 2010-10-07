@@ -1,0 +1,10 @@
+<b>Price : </b><%= room.price %> | 
+<%= room.room_type_id %>
+
+<p>
+  <%= link_to "Show", room %>
+  <%= link_to "Edit", edit_room_path(room) %>
+  <%= link_to "Destroy", room, :confirm => 'Are you sure?', :method => :delete %>
+</p>
+
+<hr />

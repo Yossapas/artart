@@ -1,0 +1,12 @@
+<% title "Hotel Feature" %>
+
+<p>
+  <strong>Name:</strong>
+  <%= @hotel_feature.name %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_hotel_feature_path(@hotel_feature) %> |
+  <%= link_to "Destroy", @hotel_feature, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", hotel_features_path %>
+</p>
