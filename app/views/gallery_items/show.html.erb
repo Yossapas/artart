@@ -1,0 +1,16 @@
+<% title "Gallery Item" %>
+
+<p>
+  <strong>Name:</strong>
+  <%= @gallery_item.name %>
+</p>
+<p>
+  <strong>Gallery:</strong>
+  <%= @gallery_item.gallery_id %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_gallery_item_path(@gallery_item) %> |
+  <%= link_to "Destroy", @gallery_item, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", gallery_items_path %>
+</p>

@@ -1,4 +1,8 @@
 Artart::Application.routes.draw do
+  resources :gallery_items
+
+  resources :galleries
+
   resources :room_available_dates
 
   resources :rooms

@@ -1,9 +1,11 @@
-1286432686
+1286441647
 Application	/home/phuketschool/dev/ror/artart/config/application.rb	  class Application 
 ApplicationController	/home/phuketschool/dev/ror/artart/app/controllers/application_controller.rb	class ApplicationController 
 ApplicationHelper	/home/phuketschool/dev/ror/artart/app/helpers/application_helper.rb	module ApplicationHelper
 Artart	/home/phuketschool/dev/ror/artart/config/application.rb	module Artart
 BrowsingTest	/home/phuketschool/dev/ror/artart/test/performance/browsing_test.rb	class BrowsingTest 
+CreateGalleries	/home/phuketschool/dev/ror/artart/db/migrate/20101007082358_create_galleries.rb	class CreateGalleries 
+CreateGalleryItems	/home/phuketschool/dev/ror/artart/db/migrate/20101007082524_create_gallery_items.rb	class CreateGalleryItems 
 CreateHotelFeatures	/home/phuketschool/dev/ror/artart/db/migrate/20101006102126_create_hotel_features.rb	class CreateHotelFeatures 
 CreateHotelFeaturings	/home/phuketschool/dev/ror/artart/db/migrate/20101006102446_create_hotel_featurings.rb	class CreateHotelFeaturings 
 CreateHotels	/home/phuketschool/dev/ror/artart/db/migrate/20101006102035_create_hotels.rb	class CreateHotels 
@@ -14,6 +16,16 @@ CreateRoomTypes	/home/phuketschool/dev/ror/artart/db/migrate/20101006102532_crea
 CreateRooms	/home/phuketschool/dev/ror/artart/db/migrate/20101006102930_create_rooms.rb	class CreateRooms 
 ErrorMessagesHelper	/home/phuketschool/dev/ror/artart/app/helpers/error_messages_helper.rb	module ErrorMessagesHelper
 FormBuilderAdditions	/home/phuketschool/dev/ror/artart/app/helpers/error_messages_helper.rb	  module FormBuilderAdditions
+GalleriesController	/home/phuketschool/dev/ror/artart/app/controllers/galleries_controller.rb	class GalleriesController 
+GalleriesControllerTest	/home/phuketschool/dev/ror/artart/test/functional/galleries_controller_test.rb	class GalleriesControllerTest 
+GalleriesHelper	/home/phuketschool/dev/ror/artart/app/helpers/galleries_helper.rb	module GalleriesHelper
+Gallery	/home/phuketschool/dev/ror/artart/app/models/gallery.rb	class Gallery 
+GalleryItem	/home/phuketschool/dev/ror/artart/app/models/gallery_item.rb	class GalleryItem 
+GalleryItemTest	/home/phuketschool/dev/ror/artart/test/unit/gallery_item_test.rb	class GalleryItemTest 
+GalleryItemsController	/home/phuketschool/dev/ror/artart/app/controllers/gallery_items_controller.rb	class GalleryItemsController 
+GalleryItemsControllerTest	/home/phuketschool/dev/ror/artart/test/functional/gallery_items_controller_test.rb	class GalleryItemsControllerTest 
+GalleryItemsHelper	/home/phuketschool/dev/ror/artart/app/helpers/gallery_items_helper.rb	module GalleryItemsHelper
+GalleryTest	/home/phuketschool/dev/ror/artart/test/unit/gallery_test.rb	class GalleryTest 
 Hotel	/home/phuketschool/dev/ror/artart/app/models/hotel.rb	class Hotel 
 HotelFeature	/home/phuketschool/dev/ror/artart/app/models/hotel_feature.rb	class HotelFeature 
 HotelFeatureTest	/home/phuketschool/dev/ror/artart/test/unit/hotel_feature_test.rb	class HotelFeatureTest 
@@ -60,6 +72,8 @@ WelcomeController	/home/phuketschool/dev/ror/artart/app/controllers/welcome_cont
 WelcomeControllerTest	/home/phuketschool/dev/ror/artart/test/functional/welcome_controller_test.rb	class WelcomeControllerTest 
 WelcomeHelper	/home/phuketschool/dev/ror/artart/app/helpers/welcome_helper.rb	module WelcomeHelper
 WelcomeHelperTest	/home/phuketschool/dev/ror/artart/test/unit/helpers/welcome_helper_test.rb	class WelcomeHelperTest 
+create	/home/phuketschool/dev/ror/artart/app/controllers/galleries_controller.rb	  def create
+create	/home/phuketschool/dev/ror/artart/app/controllers/gallery_items_controller.rb	  def create
 create	/home/phuketschool/dev/ror/artart/app/controllers/hotel_features_controller.rb	  def create
 create	/home/phuketschool/dev/ror/artart/app/controllers/hotel_featurings_controller.rb	  def create
 create	/home/phuketschool/dev/ror/artart/app/controllers/hotels_controller.rb	  def create
@@ -68,6 +82,8 @@ create	/home/phuketschool/dev/ror/artart/app/controllers/room_type_features_cont
 create	/home/phuketschool/dev/ror/artart/app/controllers/room_type_featurings_controller.rb	  def create
 create	/home/phuketschool/dev/ror/artart/app/controllers/room_types_controller.rb	  def create
 create	/home/phuketschool/dev/ror/artart/app/controllers/rooms_controller.rb	  def create
+destroy	/home/phuketschool/dev/ror/artart/app/controllers/galleries_controller.rb	  def destroy
+destroy	/home/phuketschool/dev/ror/artart/app/controllers/gallery_items_controller.rb	  def destroy
 destroy	/home/phuketschool/dev/ror/artart/app/controllers/hotel_features_controller.rb	  def destroy
 destroy	/home/phuketschool/dev/ror/artart/app/controllers/hotel_featurings_controller.rb	  def destroy
 destroy	/home/phuketschool/dev/ror/artart/app/controllers/hotels_controller.rb	  def destroy
@@ -84,6 +100,10 @@ down	/home/phuketschool/dev/ror/artart/db/migrate/20101006102602_create_room_typ
 down	/home/phuketschool/dev/ror/artart/db/migrate/20101006102650_create_room_type_featurings.rb	  def self.down
 down	/home/phuketschool/dev/ror/artart/db/migrate/20101006102930_create_rooms.rb	  def self.down
 down	/home/phuketschool/dev/ror/artart/db/migrate/20101006103147_create_room_available_dates.rb	  def self.down
+down	/home/phuketschool/dev/ror/artart/db/migrate/20101007082358_create_galleries.rb	  def self.down
+down	/home/phuketschool/dev/ror/artart/db/migrate/20101007082524_create_gallery_items.rb	  def self.down
+edit	/home/phuketschool/dev/ror/artart/app/controllers/galleries_controller.rb	  def edit
+edit	/home/phuketschool/dev/ror/artart/app/controllers/gallery_items_controller.rb	  def edit
 edit	/home/phuketschool/dev/ror/artart/app/controllers/hotel_features_controller.rb	  def edit
 edit	/home/phuketschool/dev/ror/artart/app/controllers/hotel_featurings_controller.rb	  def edit
 edit	/home/phuketschool/dev/ror/artart/app/controllers/hotels_controller.rb	  def edit
@@ -94,6 +114,8 @@ edit	/home/phuketschool/dev/ror/artart/app/controllers/room_types_controller.rb	
 edit	/home/phuketschool/dev/ror/artart/app/controllers/rooms_controller.rb	  def edit
 error_messages	/home/phuketschool/dev/ror/artart/app/helpers/error_messages_helper.rb	    def error_messages
 error_messages_for	/home/phuketschool/dev/ror/artart/app/helpers/error_messages_helper.rb	  def error_messages_for
+index	/home/phuketschool/dev/ror/artart/app/controllers/galleries_controller.rb	  def index
+index	/home/phuketschool/dev/ror/artart/app/controllers/gallery_items_controller.rb	  def index
 index	/home/phuketschool/dev/ror/artart/app/controllers/hotel_features_controller.rb	  def index
 index	/home/phuketschool/dev/ror/artart/app/controllers/hotel_featurings_controller.rb	  def index
 index	/home/phuketschool/dev/ror/artart/app/controllers/hotels_controller.rb	  def index
@@ -104,6 +126,8 @@ index	/home/phuketschool/dev/ror/artart/app/controllers/room_types_controller.rb
 index	/home/phuketschool/dev/ror/artart/app/controllers/rooms_controller.rb	  def index
 index	/home/phuketschool/dev/ror/artart/app/controllers/welcome_controller.rb	  def index
 javascript	/home/phuketschool/dev/ror/artart/app/helpers/layout_helper.rb	  def javascript
+new	/home/phuketschool/dev/ror/artart/app/controllers/galleries_controller.rb	  def new
+new	/home/phuketschool/dev/ror/artart/app/controllers/gallery_items_controller.rb	  def new
 new	/home/phuketschool/dev/ror/artart/app/controllers/hotel_features_controller.rb	  def new
 new	/home/phuketschool/dev/ror/artart/app/controllers/hotel_featurings_controller.rb	  def new
 new	/home/phuketschool/dev/ror/artart/app/controllers/hotels_controller.rb	  def new
@@ -112,6 +136,8 @@ new	/home/phuketschool/dev/ror/artart/app/controllers/room_type_features_control
 new	/home/phuketschool/dev/ror/artart/app/controllers/room_type_featurings_controller.rb	  def new
 new	/home/phuketschool/dev/ror/artart/app/controllers/room_types_controller.rb	  def new
 new	/home/phuketschool/dev/ror/artart/app/controllers/rooms_controller.rb	  def new
+show	/home/phuketschool/dev/ror/artart/app/controllers/galleries_controller.rb	  def show
+show	/home/phuketschool/dev/ror/artart/app/controllers/gallery_items_controller.rb	  def show
 show	/home/phuketschool/dev/ror/artart/app/controllers/hotel_features_controller.rb	  def show
 show	/home/phuketschool/dev/ror/artart/app/controllers/hotel_featurings_controller.rb	  def show
 show	/home/phuketschool/dev/ror/artart/app/controllers/hotels_controller.rb	  def show
@@ -122,6 +148,8 @@ show	/home/phuketschool/dev/ror/artart/app/controllers/room_types_controller.rb	
 show	/home/phuketschool/dev/ror/artart/app/controllers/rooms_controller.rb	  def show
 show_title?	/home/phuketschool/dev/ror/artart/app/helpers/layout_helper.rb	  def show_title?
 stylesheet	/home/phuketschool/dev/ror/artart/app/helpers/layout_helper.rb	  def stylesheet
+test_create_invalid	/home/phuketschool/dev/ror/artart/test/functional/galleries_controller_test.rb	  def test_create_invalid
+test_create_invalid	/home/phuketschool/dev/ror/artart/test/functional/gallery_items_controller_test.rb	  def test_create_invalid
 test_create_invalid	/home/phuketschool/dev/ror/artart/test/functional/hotel_features_controller_test.rb	  def test_create_invalid
 test_create_invalid	/home/phuketschool/dev/ror/artart/test/functional/hotel_featurings_controller_test.rb	  def test_create_invalid
 test_create_invalid	/home/phuketschool/dev/ror/artart/test/functional/hotels_controller_test.rb	  def test_create_invalid
@@ -130,6 +158,8 @@ test_create_invalid	/home/phuketschool/dev/ror/artart/test/functional/room_type_
 test_create_invalid	/home/phuketschool/dev/ror/artart/test/functional/room_type_featurings_controller_test.rb	  def test_create_invalid
 test_create_invalid	/home/phuketschool/dev/ror/artart/test/functional/room_types_controller_test.rb	  def test_create_invalid
 test_create_invalid	/home/phuketschool/dev/ror/artart/test/functional/rooms_controller_test.rb	  def test_create_invalid
+test_create_valid	/home/phuketschool/dev/ror/artart/test/functional/galleries_controller_test.rb	  def test_create_valid
+test_create_valid	/home/phuketschool/dev/ror/artart/test/functional/gallery_items_controller_test.rb	  def test_create_valid
 test_create_valid	/home/phuketschool/dev/ror/artart/test/functional/hotel_features_controller_test.rb	  def test_create_valid
 test_create_valid	/home/phuketschool/dev/ror/artart/test/functional/hotel_featurings_controller_test.rb	  def test_create_valid
 test_create_valid	/home/phuketschool/dev/ror/artart/test/functional/hotels_controller_test.rb	  def test_create_valid
@@ -138,6 +168,8 @@ test_create_valid	/home/phuketschool/dev/ror/artart/test/functional/room_type_fe
 test_create_valid	/home/phuketschool/dev/ror/artart/test/functional/room_type_featurings_controller_test.rb	  def test_create_valid
 test_create_valid	/home/phuketschool/dev/ror/artart/test/functional/room_types_controller_test.rb	  def test_create_valid
 test_create_valid	/home/phuketschool/dev/ror/artart/test/functional/rooms_controller_test.rb	  def test_create_valid
+test_destroy	/home/phuketschool/dev/ror/artart/test/functional/galleries_controller_test.rb	  def test_destroy
+test_destroy	/home/phuketschool/dev/ror/artart/test/functional/gallery_items_controller_test.rb	  def test_destroy
 test_destroy	/home/phuketschool/dev/ror/artart/test/functional/hotel_features_controller_test.rb	  def test_destroy
 test_destroy	/home/phuketschool/dev/ror/artart/test/functional/hotel_featurings_controller_test.rb	  def test_destroy
 test_destroy	/home/phuketschool/dev/ror/artart/test/functional/hotels_controller_test.rb	  def test_destroy
@@ -146,6 +178,8 @@ test_destroy	/home/phuketschool/dev/ror/artart/test/functional/room_type_feature
 test_destroy	/home/phuketschool/dev/ror/artart/test/functional/room_type_featurings_controller_test.rb	  def test_destroy
 test_destroy	/home/phuketschool/dev/ror/artart/test/functional/room_types_controller_test.rb	  def test_destroy
 test_destroy	/home/phuketschool/dev/ror/artart/test/functional/rooms_controller_test.rb	  def test_destroy
+test_edit	/home/phuketschool/dev/ror/artart/test/functional/galleries_controller_test.rb	  def test_edit
+test_edit	/home/phuketschool/dev/ror/artart/test/functional/gallery_items_controller_test.rb	  def test_edit
 test_edit	/home/phuketschool/dev/ror/artart/test/functional/hotel_features_controller_test.rb	  def test_edit
 test_edit	/home/phuketschool/dev/ror/artart/test/functional/hotel_featurings_controller_test.rb	  def test_edit
 test_edit	/home/phuketschool/dev/ror/artart/test/functional/hotels_controller_test.rb	  def test_edit
@@ -155,6 +189,8 @@ test_edit	/home/phuketschool/dev/ror/artart/test/functional/room_type_featurings
 test_edit	/home/phuketschool/dev/ror/artart/test/functional/room_types_controller_test.rb	  def test_edit
 test_edit	/home/phuketschool/dev/ror/artart/test/functional/rooms_controller_test.rb	  def test_edit
 test_homepage	/home/phuketschool/dev/ror/artart/test/performance/browsing_test.rb	  def test_homepage
+test_index	/home/phuketschool/dev/ror/artart/test/functional/galleries_controller_test.rb	  def test_index
+test_index	/home/phuketschool/dev/ror/artart/test/functional/gallery_items_controller_test.rb	  def test_index
 test_index	/home/phuketschool/dev/ror/artart/test/functional/hotel_features_controller_test.rb	  def test_index
 test_index	/home/phuketschool/dev/ror/artart/test/functional/hotel_featurings_controller_test.rb	  def test_index
 test_index	/home/phuketschool/dev/ror/artart/test/functional/hotels_controller_test.rb	  def test_index
@@ -163,6 +199,8 @@ test_index	/home/phuketschool/dev/ror/artart/test/functional/room_type_features_
 test_index	/home/phuketschool/dev/ror/artart/test/functional/room_type_featurings_controller_test.rb	  def test_index
 test_index	/home/phuketschool/dev/ror/artart/test/functional/room_types_controller_test.rb	  def test_index
 test_index	/home/phuketschool/dev/ror/artart/test/functional/rooms_controller_test.rb	  def test_index
+test_new	/home/phuketschool/dev/ror/artart/test/functional/galleries_controller_test.rb	  def test_new
+test_new	/home/phuketschool/dev/ror/artart/test/functional/gallery_items_controller_test.rb	  def test_new
 test_new	/home/phuketschool/dev/ror/artart/test/functional/hotel_features_controller_test.rb	  def test_new
 test_new	/home/phuketschool/dev/ror/artart/test/functional/hotel_featurings_controller_test.rb	  def test_new
 test_new	/home/phuketschool/dev/ror/artart/test/functional/hotels_controller_test.rb	  def test_new
@@ -171,6 +209,8 @@ test_new	/home/phuketschool/dev/ror/artart/test/functional/room_type_features_co
 test_new	/home/phuketschool/dev/ror/artart/test/functional/room_type_featurings_controller_test.rb	  def test_new
 test_new	/home/phuketschool/dev/ror/artart/test/functional/room_types_controller_test.rb	  def test_new
 test_new	/home/phuketschool/dev/ror/artart/test/functional/rooms_controller_test.rb	  def test_new
+test_should_be_valid	/home/phuketschool/dev/ror/artart/test/unit/gallery_item_test.rb	  def test_should_be_valid
+test_should_be_valid	/home/phuketschool/dev/ror/artart/test/unit/gallery_test.rb	  def test_should_be_valid
 test_should_be_valid	/home/phuketschool/dev/ror/artart/test/unit/hotel_feature_test.rb	  def test_should_be_valid
 test_should_be_valid	/home/phuketschool/dev/ror/artart/test/unit/hotel_featuring_test.rb	  def test_should_be_valid
 test_should_be_valid	/home/phuketschool/dev/ror/artart/test/unit/hotel_test.rb	  def test_should_be_valid
@@ -179,6 +219,8 @@ test_should_be_valid	/home/phuketschool/dev/ror/artart/test/unit/room_test.rb	  
 test_should_be_valid	/home/phuketschool/dev/ror/artart/test/unit/room_type_feature_test.rb	  def test_should_be_valid
 test_should_be_valid	/home/phuketschool/dev/ror/artart/test/unit/room_type_featuring_test.rb	  def test_should_be_valid
 test_should_be_valid	/home/phuketschool/dev/ror/artart/test/unit/room_type_test.rb	  def test_should_be_valid
+test_show	/home/phuketschool/dev/ror/artart/test/functional/galleries_controller_test.rb	  def test_show
+test_show	/home/phuketschool/dev/ror/artart/test/functional/gallery_items_controller_test.rb	  def test_show
 test_show	/home/phuketschool/dev/ror/artart/test/functional/hotel_features_controller_test.rb	  def test_show
 test_show	/home/phuketschool/dev/ror/artart/test/functional/hotel_featurings_controller_test.rb	  def test_show
 test_show	/home/phuketschool/dev/ror/artart/test/functional/hotels_controller_test.rb	  def test_show
@@ -187,6 +229,8 @@ test_show	/home/phuketschool/dev/ror/artart/test/functional/room_type_features_c
 test_show	/home/phuketschool/dev/ror/artart/test/functional/room_type_featurings_controller_test.rb	  def test_show
 test_show	/home/phuketschool/dev/ror/artart/test/functional/room_types_controller_test.rb	  def test_show
 test_show	/home/phuketschool/dev/ror/artart/test/functional/rooms_controller_test.rb	  def test_show
+test_update_invalid	/home/phuketschool/dev/ror/artart/test/functional/galleries_controller_test.rb	  def test_update_invalid
+test_update_invalid	/home/phuketschool/dev/ror/artart/test/functional/gallery_items_controller_test.rb	  def test_update_invalid
 test_update_invalid	/home/phuketschool/dev/ror/artart/test/functional/hotel_features_controller_test.rb	  def test_update_invalid
 test_update_invalid	/home/phuketschool/dev/ror/artart/test/functional/hotel_featurings_controller_test.rb	  def test_update_invalid
 test_update_invalid	/home/phuketschool/dev/ror/artart/test/functional/hotels_controller_test.rb	  def test_update_invalid
@@ -195,6 +239,8 @@ test_update_invalid	/home/phuketschool/dev/ror/artart/test/functional/room_type_
 test_update_invalid	/home/phuketschool/dev/ror/artart/test/functional/room_type_featurings_controller_test.rb	  def test_update_invalid
 test_update_invalid	/home/phuketschool/dev/ror/artart/test/functional/room_types_controller_test.rb	  def test_update_invalid
 test_update_invalid	/home/phuketschool/dev/ror/artart/test/functional/rooms_controller_test.rb	  def test_update_invalid
+test_update_valid	/home/phuketschool/dev/ror/artart/test/functional/galleries_controller_test.rb	  def test_update_valid
+test_update_valid	/home/phuketschool/dev/ror/artart/test/functional/gallery_items_controller_test.rb	  def test_update_valid
 test_update_valid	/home/phuketschool/dev/ror/artart/test/functional/hotel_features_controller_test.rb	  def test_update_valid
 test_update_valid	/home/phuketschool/dev/ror/artart/test/functional/hotel_featurings_controller_test.rb	  def test_update_valid
 test_update_valid	/home/phuketschool/dev/ror/artart/test/functional/hotels_controller_test.rb	  def test_update_valid
@@ -212,6 +258,10 @@ up	/home/phuketschool/dev/ror/artart/db/migrate/20101006102602_create_room_type_
 up	/home/phuketschool/dev/ror/artart/db/migrate/20101006102650_create_room_type_featurings.rb	  def self.up
 up	/home/phuketschool/dev/ror/artart/db/migrate/20101006102930_create_rooms.rb	  def self.up
 up	/home/phuketschool/dev/ror/artart/db/migrate/20101006103147_create_room_available_dates.rb	  def self.up
+up	/home/phuketschool/dev/ror/artart/db/migrate/20101007082358_create_galleries.rb	  def self.up
+up	/home/phuketschool/dev/ror/artart/db/migrate/20101007082524_create_gallery_items.rb	  def self.up
+update	/home/phuketschool/dev/ror/artart/app/controllers/galleries_controller.rb	  def update
+update	/home/phuketschool/dev/ror/artart/app/controllers/gallery_items_controller.rb	  def update
 update	/home/phuketschool/dev/ror/artart/app/controllers/hotel_features_controller.rb	  def update
 update	/home/phuketschool/dev/ror/artart/app/controllers/hotel_featurings_controller.rb	  def update
 update	/home/phuketschool/dev/ror/artart/app/controllers/hotels_controller.rb	  def update

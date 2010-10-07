@@ -10,7 +10,22 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20101006103147) do
+ActiveRecord::Schema.define(:version => 20101007082524) do
+
+  create_table "galleries", :force => true do |t|
+    t.string   "name"
+    t.integer  "galleriable_id"
+    t.string   "galleriable_type"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "gallery_items", :force => true do |t|
+    t.string   "name"
+    t.integer  "gallery_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "hotel_features", :force => true do |t|
     t.string   "name"

@@ -1,0 +1,9 @@
+one:
+  name: MyString
+  galleriable_id: 1
+  galleriable_type: MyString
+
+two:
+  name: MyString
+  galleriable_id: 1
+  galleriable_type: MyString
