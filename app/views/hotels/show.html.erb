@@ -47,8 +47,17 @@
 
 <% if @hotel.gallery %>
   
-  <h3>Gallery</h3>
-  <%= render :partial => '/galleries/gallery', :locals => {:gallery => @hotel.gallery} %>
+  <h3><%= @hotel.name%>'s Gallery</h3>
+  
+  <% if !(@hotel.gallery.gallery_items == []) %>
+    <%= render :partial => '/galleries/gallery', :locals => {:gallery => @hotel.gallery} %>
+  <% else %>
+    <% if can? :update, Gallery %>
+      <p>Don't have any photos <%= link_to "Add Photo", @hotel.gallery %></p>
+    <% else %>
+      <p>Don't have any photos</p>
+    <% end %>
+  <% end %>
 
 <% else %>
 

@@ -1,15 +1,15 @@
 <p>
-  <%= link_to gallery.name, gallery %><br />
   <% if can? :update, Gallery %>
-    <%= link_to "Edit", edit_gallery_path(gallery) %> | 
+    <%= link_to "Add photo", gallery %> | 
   <% end %>
   <% if can? :destroy, Gallery %>
     <%= link_to "Destroy", gallery, :confirm => 'Are you sure?', :method => :delete %>
   <% end %>
 </p>
 
-<ul>
+<ul id="gallery">
   <% gallery.gallery_items.each do |gallery_item| %>
-    <%= image_tag gallery_item.photo.url(:small)%><br/>
+    <%= link_to image_tag(gallery_item.photo.url(:small)), gallery_item.photo.url, :title => gallery_item.name %>
+    <%#= image_tag gallery_item.photo.url(:small)%><br/>
   <% end%>
 </ul>

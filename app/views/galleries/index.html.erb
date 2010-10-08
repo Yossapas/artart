@@ -2,7 +2,11 @@
 
 <% for gallery in @galleries %>
 
-  <%= link_to gallery.name, gallery %><br />
+  <% if can? :update, Gallery %>
+    <%= link_to gallery.name, gallery %>
+  <% else %>
+    <%= gallery.name %>
+  <% end %>
   <p>
     <% if can? :update, Gallery %>
       <%= link_to "Edit", edit_gallery_path(gallery) %> | 

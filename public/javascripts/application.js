@@ -3,11 +3,13 @@
 
 $(document).ready(function(){
   
-  test();
+  $('#gallery a').lightBox({
+    fixedNavigation:true,
+    imageBlank: '/images/lightbox/lightbox-blank.gif',
+    imageLoading: '/images/lightbox/lightbox-ico-loading.gif',
+	  imageBtnClose: '/images/lightbox/lightbox-btn-close.gif',
+	  imageBtnPrev: '/images/lightbox/lightbox-btn-prev.gif',
+	  imageBtnNext: '/images/lightbox/lightbox-btn-next.gif'
+  });
   
 });
-
-
-function test(){
-  $("#test").html("<b>It's work!</b>");
-}
