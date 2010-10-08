@@ -1,0 +1,11 @@
+Name : <%= link_to gallery_item.name, gallery_item %> | 
+GalleryId : <%= gallery_item.gallery_id %>
+
+<p>
+  <% if can? :create, GalleryItem %>
+    <%= link_to "Edit", edit_gallery_item_path(gallery_item) %>
+  <% end %>
+  <% if can? :destroy, GalleryItem %>
+    <%= link_to "Destroy", gallery_item, :confirm => 'Are you sure?', :method => :delete %>
+  <% end %>
+</p>

@@ -19,11 +19,18 @@
 
 <% end %>
 
-<h4>Add Photo</h4>
-<%= render :partial => '/gallery_items/form' %>
+<% if can? :update, GalleryItem %>
+  <h4>Add Photo</h4>
+  <%= render :partial => '/gallery_items/form' %>
+<% end %>
 
 <p>
-  <%= link_to "Edit", edit_gallery_path(@gallery) %> |
-  <%= link_to "Destroy", @gallery, :confirm => 'Are you sure?', :method => :delete %> |
-  <%= link_to "View All", galleries_path %>
+  <% if can? :update, Gallery %>
+    <%= link_to "Edit", edit_gallery_path(@gallery) %> |
+  <% end %>
+  <% if can? :destroy, Gallery %>
+    <%= link_to "Destroy", @gallery, :confirm => 'Are you sure?', :method => :delete %> |
+  <% end %>
 </p>
+
+<%= link_to "Back to Galleries", galleries_path %>

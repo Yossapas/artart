@@ -1,4 +1,7 @@
 class GalleryItemsController < ApplicationController
+  
+  load_and_authorize_resource
+  
   def index
     @gallery_items = GalleryItem.all
   end

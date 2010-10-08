@@ -2,4 +2,6 @@
 
 <%= render @hotels %>
 
-<p><%= link_to "New Hotel", new_hotel_path %></p>
+<% if can? :create, Hotel %>
+  <p><%= link_to "New Hotel", new_hotel_path %></p>
+<% end %>

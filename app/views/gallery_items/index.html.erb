@@ -1,19 +1,7 @@
 <% title "Gallery Items" %>
 
-<table>
-  <tr>
-    <th>Name</th>
-    <th>Gallery</th>
-  </tr>
-  <% for gallery_item in @gallery_items %>
-    <tr>
-      <td><%= gallery_item.name %></td>
-      <td><%= gallery_item.gallery_id %></td>
-      <td><%= link_to "Show", gallery_item %></td>
-      <td><%= link_to "Edit", edit_gallery_item_path(gallery_item) %></td>
-      <td><%= link_to "Destroy", gallery_item, :confirm => 'Are you sure?', :method => :delete %></td>
-    </tr>
-  <% end %>
-</table>
+<%= render @gallery_items %>
 
-<p><%= link_to "New Gallery Item", new_gallery_item_path %></p>
+<% if can? :create, GalleryItem %>
+  <p><%= link_to "New Gallery Item", new_gallery_item_path %></p>
+<% end %>

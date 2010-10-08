@@ -1,5 +1,7 @@
-1286447433
+1286527089
+Ability	/home/phuketschool/dev/ror/artart/app/models/ability.rb	class Ability
 AddAttachmentPhotoToGalleryItem	/home/phuketschool/dev/ror/artart/db/migrate/20101007095620_add_attachment_photo_to_gallery_item.rb	class AddAttachmentPhotoToGalleryItem 
+AddRolesMaskToUser	/home/phuketschool/dev/ror/artart/db/migrate/20101007104258_add_roles_mask_to_user.rb	class AddRolesMaskToUser 
 Application	/home/phuketschool/dev/ror/artart/config/application.rb	  class Application 
 ApplicationController	/home/phuketschool/dev/ror/artart/app/controllers/application_controller.rb	class ApplicationController 
 ApplicationHelper	/home/phuketschool/dev/ror/artart/app/helpers/application_helper.rb	module ApplicationHelper
@@ -44,6 +46,7 @@ HotelsController	/home/phuketschool/dev/ror/artart/app/controllers/hotels_contro
 HotelsControllerTest	/home/phuketschool/dev/ror/artart/test/functional/hotels_controller_test.rb	class HotelsControllerTest 
 HotelsHelper	/home/phuketschool/dev/ror/artart/app/helpers/hotels_helper.rb	module HotelsHelper
 LayoutHelper	/home/phuketschool/dev/ror/artart/app/helpers/layout_helper.rb	module LayoutHelper
+ROLES	/home/phuketschool/dev/ror/artart/app/models/user.rb	  ROLES =
 Room	/home/phuketschool/dev/ror/artart/app/models/room.rb	class Room 
 RoomAvailableDate	/home/phuketschool/dev/ror/artart/app/models/room_available_date.rb	class RoomAvailableDate 
 RoomAvailableDateTest	/home/phuketschool/dev/ror/artart/test/unit/room_available_date_test.rb	class RoomAvailableDateTest 
@@ -108,6 +111,7 @@ down	/home/phuketschool/dev/ror/artart/db/migrate/20101007082358_create_gallerie
 down	/home/phuketschool/dev/ror/artart/db/migrate/20101007082524_create_gallery_items.rb	  def self.down
 down	/home/phuketschool/dev/ror/artart/db/migrate/20101007095620_add_attachment_photo_to_gallery_item.rb	  def self.down
 down	/home/phuketschool/dev/ror/artart/db/migrate/20101007101656_devise_create_users.rb	  def self.down
+down	/home/phuketschool/dev/ror/artart/db/migrate/20101007104258_add_roles_mask_to_user.rb	  def self.down
 edit	/home/phuketschool/dev/ror/artart/app/controllers/galleries_controller.rb	  def edit
 edit	/home/phuketschool/dev/ror/artart/app/controllers/gallery_items_controller.rb	  def edit
 edit	/home/phuketschool/dev/ror/artart/app/controllers/hotel_features_controller.rb	  def edit
@@ -131,6 +135,7 @@ index	/home/phuketschool/dev/ror/artart/app/controllers/room_type_featurings_con
 index	/home/phuketschool/dev/ror/artart/app/controllers/room_types_controller.rb	  def index
 index	/home/phuketschool/dev/ror/artart/app/controllers/rooms_controller.rb	  def index
 index	/home/phuketschool/dev/ror/artart/app/controllers/welcome_controller.rb	  def index
+initialize	/home/phuketschool/dev/ror/artart/app/models/ability.rb	  def initialize
 javascript	/home/phuketschool/dev/ror/artart/app/helpers/layout_helper.rb	  def javascript
 new	/home/phuketschool/dev/ror/artart/app/controllers/galleries_controller.rb	  def new
 new	/home/phuketschool/dev/ror/artart/app/controllers/gallery_items_controller.rb	  def new
@@ -142,6 +147,9 @@ new	/home/phuketschool/dev/ror/artart/app/controllers/room_type_features_control
 new	/home/phuketschool/dev/ror/artart/app/controllers/room_type_featurings_controller.rb	  def new
 new	/home/phuketschool/dev/ror/artart/app/controllers/room_types_controller.rb	  def new
 new	/home/phuketschool/dev/ror/artart/app/controllers/rooms_controller.rb	  def new
+role_symbols	/home/phuketschool/dev/ror/artart/app/models/user.rb	  def role_symbols
+roles	/home/phuketschool/dev/ror/artart/app/models/user.rb	  def roles
+roles	/home/phuketschool/dev/ror/artart/app/models/user.rb	  def roles
 show	/home/phuketschool/dev/ror/artart/app/controllers/galleries_controller.rb	  def show
 show	/home/phuketschool/dev/ror/artart/app/controllers/gallery_items_controller.rb	  def show
 show	/home/phuketschool/dev/ror/artart/app/controllers/hotel_features_controller.rb	  def show
@@ -268,6 +276,7 @@ up	/home/phuketschool/dev/ror/artart/db/migrate/20101007082358_create_galleries.
 up	/home/phuketschool/dev/ror/artart/db/migrate/20101007082524_create_gallery_items.rb	  def self.up
 up	/home/phuketschool/dev/ror/artart/db/migrate/20101007095620_add_attachment_photo_to_gallery_item.rb	  def self.up
 up	/home/phuketschool/dev/ror/artart/db/migrate/20101007101656_devise_create_users.rb	  def self.up
+up	/home/phuketschool/dev/ror/artart/db/migrate/20101007104258_add_roles_mask_to_user.rb	  def self.up
 update	/home/phuketschool/dev/ror/artart/app/controllers/galleries_controller.rb	  def update
 update	/home/phuketschool/dev/ror/artart/app/controllers/gallery_items_controller.rb	  def update
 update	/home/phuketschool/dev/ror/artart/app/controllers/hotel_features_controller.rb	  def update

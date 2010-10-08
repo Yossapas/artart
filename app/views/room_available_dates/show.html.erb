@@ -14,7 +14,12 @@
 </p>
 
 <p>
-  <%= link_to "Edit", edit_room_available_date_path(@room_available_date) %> |
-  <%= link_to "Destroy", @room_available_date, :confirm => 'Are you sure?', :method => :delete %> |
-  <%= link_to "View All", room_available_dates_path %>
+  <% if can? :update, RoomAvailableDate%>
+    <%= link_to "Edit", edit_room_available_date_path(@room_available_date) %>
+  <% end %>
+  <% if can? :destroy, RoomAvailableDate %>
+    <%= link_to "Destroy", @room_available_date, :confirm => 'Are you sure?', :method => :delete %>
+  <% end %>
 </p>
+
+<%= link_to "Back to Room available dates", room_available_dates_path %>

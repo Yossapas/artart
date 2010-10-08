@@ -6,7 +6,12 @@
 </p>
 
 <p>
-  <%= link_to "Edit", edit_hotel_feature_path(@hotel_feature) %> |
-  <%= link_to "Destroy", @hotel_feature, :confirm => 'Are you sure?', :method => :delete %> |
-  <%= link_to "View All", hotel_features_path %>
+  <% if can? :update, HotelFeature %>
+    <%= link_to "Edit", edit_hotel_feature_path(@hotel_feature) %> | 
+  <% end %>
+  <% if can? :destroy, HotelFeature %>
+    <%= link_to "Destroy", @hotel_feature, :confirm => 'Are you sure?', :method => :delete %>
+  <% end %>
 </p>
+
+<%= link_to "Back to Hotel Features", hotel_features_path %>

@@ -1,11 +1,14 @@
-RoomId : <%= room_available_date.room_id %><br />
+RoomId : <%= link_to room_available_date.room_id, room_available_date %><br />
 Begin : <%= room_available_date.begin_at %> | 
 End : <%= room_available_date.end_at %>
 
 <p>
-  <%= link_to "Show", room_available_date %>
-  <%= link_to "Edit", edit_room_available_date_path(room_available_date) %>
-  <%= link_to "Destroy", room_available_date, :confirm => 'Are you sure?', :method => :delete %>
+  <% if can? :update, RoomAvailableDate%>
+    <%= link_to "Edit", edit_room_available_date_path(room_available_date) %>
+  <% end %>
+  <% if can? :destroy, RoomAvailableDate %>
+    <%= link_to "Destroy", room_available_date, :confirm => 'Are you sure?', :method => :delete %>
+  <% end %>
 </p>
 
 <hr />

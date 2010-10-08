@@ -1,21 +1,20 @@
 <% title "Galleries" %>
 
-<table>
-  <tr>
-    <th>Name</th>
-    <th>Galleriable</th>
-    <th>Galleriable Type</th>
-  </tr>
-  <% for gallery in @galleries %>
-    <tr>
-      <td><%= gallery.name %></td>
-      <td><%= gallery.galleriable_id %></td>
-      <td><%= gallery.galleriable_type %></td>
-      <td><%= link_to "Show", gallery %></td>
-      <td><%= link_to "Edit", edit_gallery_path(gallery) %></td>
-      <td><%= link_to "Destroy", gallery, :confirm => 'Are you sure?', :method => :delete %></td>
-    </tr>
-  <% end %>
-</table>
+<% for gallery in @galleries %>
 
-<p><%= link_to "New Gallery", new_gallery_path %></p>
+  <%= link_to gallery.name, gallery %><br />
+  <p>
+    <% if can? :update, Gallery %>
+      <%= link_to "Edit", edit_gallery_path(gallery) %> | 
+    <% end %>
+    <% if can? :destroy, Gallery %>
+      <%= link_to "Destroy", gallery, :confirm => 'Are you sure?', :method => :delete %>
+    <% end %>
+  </p>
+  <hr />
+  
+<% end %>
+
+<% if can? :create, Gallery %>
+  <p><%= link_to "New Gallery", new_gallery_path %></p>
+<% end %>

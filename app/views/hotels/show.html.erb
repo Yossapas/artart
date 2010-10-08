@@ -57,7 +57,12 @@
 <% end %>
 
 <p>
-  <%= link_to "Edit", edit_hotel_path(@hotel) %> |
-  <%= link_to "Destroy", @hotel, :confirm => 'Are you sure?', :method => :delete %> |
-  <%= link_to "View All", hotels_path %>
+  <% if can? :update, Hotel %>
+    <%= link_to "Edit", edit_hotel_path(@hotel) %> | 
+  <% end %>
+  <% if can? :destroy, Hotel %>
+    <%= link_to "Destroy", @hotel, :confirm => 'Are you sure?', :method => :delete %>
+  <% end %>
 </p>
+
+<%= link_to "Back to Hotels", hotels_path %>

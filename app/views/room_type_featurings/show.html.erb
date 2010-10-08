@@ -10,7 +10,12 @@
 </p>
 
 <p>
-  <%= link_to "Edit", edit_room_type_featuring_path(@room_type_featuring) %> |
-  <%= link_to "Destroy", @room_type_featuring, :confirm => 'Are you sure?', :method => :delete %> |
-  <%= link_to "View All", room_type_featurings_path %>
+  <% if can? :update, RoomTypeFeaturing %>
+    <%= link_to "Edit", edit_room_type_featuring_path(@room_type_featuring) %>
+  <% end %>
+  <% if can? :destroy, RoomTypeFeaturing %>
+    <%= link_to "Destroy", @room_type_featuring, :confirm => 'Are you sure?', :method => :delete %>
+  <% end %>
 </p>
+
+<%= link_to "Back to Roomtype Featurings", room_type_featuring_path %>

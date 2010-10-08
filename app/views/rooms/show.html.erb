@@ -10,7 +10,12 @@
 </p>
 
 <p>
-  <%= link_to "Edit", edit_room_path(@room) %> |
-  <%= link_to "Destroy", @room, :confirm => 'Are you sure?', :method => :delete %> |
-  <%= link_to "View All", rooms_path %>
+  <% if can? :update, Room%>
+    <%= link_to "Edit", edit_room_path(@room) %>
+  <% end %>
+  <% if can? :destroy, Room%>
+    <%= link_to "Destroy", @room, :confirm => 'Are you sure?', :method => :delete %>
+  <% end %>
 </p>
+
+<%= link_to "Back to Rooms", rooms_path %>

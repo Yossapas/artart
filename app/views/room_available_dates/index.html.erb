@@ -2,4 +2,6 @@
 
 <%= render @room_available_dates %>
 
-<p><%= link_to "New Room Available Date", new_room_available_date_path %></p>
+<% if can? :create, RoomAvailableDate %>
+  <p><%= link_to "New Room Available Date", new_room_available_date_path %></p>
+<% end%>

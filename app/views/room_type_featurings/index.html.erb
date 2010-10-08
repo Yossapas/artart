@@ -2,4 +2,6 @@
 
 <%= render @room_type_featurings %>
 
-<p><%= link_to "New Room Type Featuring", new_room_type_featuring_path %></p>
+<% if can? :create, RoomTypeFeaturing %>
+  <p><%= link_to "New Room Type Featuring", new_room_type_featuring_path %></p>
+<% end %>

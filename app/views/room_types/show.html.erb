@@ -14,7 +14,13 @@
 </p>
 
 <p>
-  <%= link_to "Edit", edit_room_type_path(@room_type) %> |
-  <%= link_to "Destroy", @room_type, :confirm => 'Are you sure?', :method => :delete %> |
-  <%= link_to "View All", room_types_path %>
+  <%= room_type.description %>
+  <% if can? :update, RoomType %>
+    <%= link_to "Edit", edit_room_type_path(@room_type) %> | 
+  <% end %>
+  <% if can? :destroy, RoomType %>
+    <%= link_to "Destroy", @room_type, :confirm => 'Are you sure?', :method => :delete %>
+  <% end %>
 </p>
+
+<%= link_to "Back to Roomtypes", room_types_path %>

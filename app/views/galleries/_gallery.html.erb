@@ -1,8 +1,11 @@
 <p>
-  <%= gallery.name %><br />
-  <%= link_to "Show", gallery_path(gallery) %> | 
-  <%= link_to "Edit", edit_gallery_path(gallery) %> | 
-  <%= link_to "Destroy", gallery, :confirm => 'Are you sure?', :method => :delete %>
+  <%= link_to gallery.name, gallery %><br />
+  <% if can? :update, Gallery %>
+    <%= link_to "Edit", edit_gallery_path(gallery) %> | 
+  <% end %>
+  <% if can? :destroy, Gallery %>
+    <%= link_to "Destroy", gallery, :confirm => 'Are you sure?', :method => :delete %>
+  <% end %>
 </p>
 
 <ul>

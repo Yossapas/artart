@@ -2,4 +2,6 @@
 
 <%= render @rooms %>
 
-<p><%= link_to "New Room", new_room_path %></p>
+<% if can? :create, Room%>
+  <p><%= link_to "New Room", new_room_path %></p>
+<% end %>

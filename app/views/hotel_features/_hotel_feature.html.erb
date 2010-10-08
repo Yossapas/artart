@@ -1,7 +1,12 @@
-<h3><%= hotel_feature.name %></h3>
+<h3><%= link_to hotel_feature.name, hotel_feature %></h3>
 
-<%= link_to "Show", hotel_feature %> | 
-<%= link_to "Edit", edit_hotel_feature_path(hotel_feature) %> | 
-<%= link_to "Destroy", hotel_feature, :confirm => 'Are you sure?', :method => :delete %>
+<p>
+  <% if can? :update, HotelFeature %>
+    <%= link_to "Edit", edit_hotel_feature_path(hotel_feature) %> | 
+  <% end %>
+  <% if can? :destroy, HotelFeature %>
+    <%= link_to "Destroy", hotel_feature, :confirm => 'Are you sure?', :method => :delete %>
+  <% end %>
+</p>
 
 <hr />

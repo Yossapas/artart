@@ -14,7 +14,12 @@
 </p>
 
 <p>
-  <%= link_to "Edit", edit_gallery_item_path(@gallery_item) %> |
-  <%= link_to "Destroy", @gallery_item, :confirm => 'Are you sure?', :method => :delete %> |
-  <%= link_to "View All", gallery_items_path %>
+  <% if can? :update, GalleryItem %>
+    <%= link_to "Edit", edit_gallery_item_path(@gallery_item) %> |
+  <% end %>
+  <% if can? :destroy, GalleryItem %>
+    <%= link_to "Destroy", @gallery_item, :confirm => 'Are you sure?', :method => :delete %>
+  <% end %>
 </p>
+
+<%= link_to "Back to Gallery Items", gallery_items_path %>
