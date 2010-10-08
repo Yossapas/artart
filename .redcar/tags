@@ -1,4 +1,4 @@
-1286531330
+1286536307
 Ability	/home/phuketschool/dev/ror/artart/app/models/ability.rb	class Ability
 AddAttachmentPhotoToGalleryItem	/home/phuketschool/dev/ror/artart/db/migrate/20101007095620_add_attachment_photo_to_gallery_item.rb	class AddAttachmentPhotoToGalleryItem 
 AddRolesMaskToUser	/home/phuketschool/dev/ror/artart/db/migrate/20101007104258_add_roles_mask_to_user.rb	class AddRolesMaskToUser 
