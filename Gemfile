@@ -12,6 +12,10 @@ gem 'devise'
 
 gem 'cancan'
 
+gem 'less'
+
+
+
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 

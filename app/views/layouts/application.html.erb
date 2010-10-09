@@ -2,44 +2,53 @@
 <html>
   <head>
     <title><%= content_for?(:title) ? yield(:title) : "Untitled" %></title>
-    <%= stylesheet_link_tag "application", "lightbox/jquery.lightbox-0.5" %>
+    <%= stylesheet_link_tag "reset", "application", "lightbox/jquery.lightbox-0.5", "app" %>
     <%= javascript_include_tag "jquery", "jquery.rails", "lightbox/jquery.lightbox-0.5.pack", "application" %>    
     <%= csrf_meta_tag %>
     <%= yield(:head) %>
   </head>
   <body>
-    <div id="test">
-      test
-    </div>
     <div id="container">
-      <% flash.each do |name, msg| %>
-        <%= content_tag :div, msg, :id => "flash_#{name}" %>
-      <% end %>
-      
-      <div id="user_nav">
-        <% if user_signed_in? %>
-          Signed in as <%= current_user.email %>. Not you?
-          <%= link_to "Sign out", destroy_user_session_path %>
-        <% else %>
-          <%= link_to "Sign up", new_user_registration_path %> or <%= link_to "sign in", new_user_session_path %>
-        <% end %>
+      <div id="header">
+        <ul>
+          <li><%= link_to "Hotel", hotels_path %></li>
+          <li><%= link_to "HotelFeature", hotel_features_path %></li>
+          <li><%= link_to "HotelFeaturing", hotel_featurings_path %></li>
+          <li><%= link_to "RoomType", room_types_path %></li>
+          <li><%= link_to "RoomTypeFeature", room_type_features_path %></li>
+          <li><%= link_to "RoomTypeFeaturing", room_type_featurings_path %></li>
+          <li><%= link_to "Room", rooms_path %></li>
+          <li><%= link_to "RoomAvailableDate", room_available_dates_path %></li>
+          <li><%= link_to "Gallery", galleries_path %></li>
+          <li><%= link_to "GalleryItem", gallery_items_path %></li>
+        </ul>
       </div>
       
-      <ul>
-        <li><%= link_to "Hotel", hotels_path %></li>
-        <li><%= link_to "HotelFeature", hotel_features_path %></li>
-        <li><%= link_to "HotelFeaturing", hotel_featurings_path %></li>
-        <li><%= link_to "RoomType", room_types_path %></li>
-        <li><%= link_to "RoomTypeFeature", room_type_features_path %></li>
-        <li><%= link_to "RoomTypeFeaturing", room_type_featurings_path %></li>
-        <li><%= link_to "Room", rooms_path %></li>
-        <li><%= link_to "RoomAvailableDate", room_available_dates_path %></li>
-        <li><%= link_to "Gallery", galleries_path %></li>
-        <li><%= link_to "GalleryItem", gallery_items_path %></li>
-      </ul>
+      <div id="body">
+        <% flash.each do |name, msg| %>
+          <%= content_tag :div, msg, :id => "flash_#{name}" %>
+        <% end %>
+        
+        <div id="user_nav">
+          <% if user_signed_in? %>
+            Signed in as <%= current_user.email %>. Not you?
+            <%= link_to "Sign out", destroy_user_session_path %>
+          <% else %>
+            <%= link_to "Sign up", new_user_registration_path %> or <%= link_to "sign in", new_user_session_path %>
+          <% end %>
+        </div>
+      </div>
+      
+      
       
       <%= content_tag :h1, yield(:title) if show_title? %>
       <%= yield %>
+      
+      <div id="foot">
+        
+      
+      </div>
+      
     </div>
   </body>
 </html>
