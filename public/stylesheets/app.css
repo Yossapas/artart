@@ -1,0 +1,119 @@
+body {
+  background-color: #4b7399;
+  font-family: Verdana, Helvetica, Arial;
+  font-size: 14px;
+}
+.clear {
+  clear: both;
+  height: 0;
+  overflow: hidden;
+}
+#container {
+  width: 900px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  border: solid 1px black;
+  margin-top: 20px;
+}
+#header {
+  background: #dddddd;
+  padding: 0;
+  margin: 0;
+  overflow: auto;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+#user_nav {
+  margin: 5px;
+  float: right;
+}
+#tabs {
+  list-style: none;
+  padding: 0 5px;
+  overflow: auto;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  border-bottom: 2px solid #999999;
+}
+#tabs li { float: left; }
+#tabs li a:link {
+  display: block;
+  background: green;
+  margin: 0 3px 0 0;
+  padding: 5px 7px;
+  color: #ffffff;
+  text-decoration: none;
+}
+#tabs li a:visited {
+  display: block;
+  background: green;
+  margin: 0 3px 0 0;
+  padding: 5px 7px;
+  color: #ffffff;
+  text-decoration: none;
+}
+#tabs li a:hover {
+  display: block;
+  background: green;
+  margin: 0 3px 0 0;
+  padding: 5px 7px;
+  color: #ffffff;
+  text-decoration: none;
+}
+#tabs li a:active {
+  display: block;
+  background: green;
+  margin: 0 3px 0 0;
+  padding: 5px 7px;
+  color: #ffffff;
+  text-decoration: none;
+}
+#tabs li a:hover {
+  background: #999999;
+  color: #444444;
+}
+#body {
+  border: 1px solid #aaaaaa;
+  padding: 10px;
+  margin: 5px;
+}
+#foot {
+  border: 1px solid #aaaaaa;
+  padding: 10px;
+  margin: 5px;
+  color: #bbbbbb;
+  font-size: 13px;
+}
+#flash_notice, #flash_error, #flash_alert {
+  padding: 5px 8px;
+  margin: 10px 0;
+}
+#flash_notice {
+  background-color: #ccffcc;
+  border: solid 1px #66cc66;
+}
+#flash_error, #flash_alert {
+  background-color: #ffcccc;
+  border: solid 1px #cc6666;
+}
+.fieldWithErrors { display: inline; }
+.error_messages {
+  width: 400px;
+  border: 2px solid #cf0000;
+  padding: 0px;
+  padding-bottom: 12px;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+  font-size: 12px;
+}
+.error_messages h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 10px;
+  font-size: 12px;
+  margin: 0;
+  background-color: #cc0000;
+  color: #ffffff;
+}
+.error_messages p { margin: 8px 10px; }
+.error_messages ul { margin: 0; }

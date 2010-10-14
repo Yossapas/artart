@@ -15,7 +15,7 @@ RoomTypeFeaturing.delete_all
 Room.delete_all
 RoomAvailableDate.delete_all
 
-#---------------------------------------------------------------------------------
+#-----Hotel-----
 
 hotel01 = Hotel.create( :name => "TheArt", 
                         :star => 5, 
@@ -41,7 +41,7 @@ hotel02 = Hotel.create( :name => "Country Club",
                         :longitude => 7.883333, 
                         :latitude => 98.4);
                         
-#---------------------------------------------------------------------------------                
+#-----HotelFeature-----
                         
 hotel_feature01 = HotelFeature.create(:name => "Swimming pool");
 
@@ -51,13 +51,13 @@ hotel_feature03 = HotelFeature.create(:name => "Sauna");
 
 hotel_feature04 = HotelFeature.create(:name => "Fitness");
 
-#---------------------------------------------------------------------------------
+#-----HotelFeaturing-----
 
 hotel_featuring01 = HotelFeaturing.create(:hotel_id => 1, :hotel_feature_id => 1);
 
 hotel_featuring02 = HotelFeaturing.create(:hotel_id => 1, :hotel_feature_id => 2);
 
-#---------------------------------------------------------------------------------
+#-----RoomType-----
 
 room_type01 = RoomType.create(:name => "Deluxe");
 
@@ -65,7 +65,7 @@ room_type02 = RoomType.create(:name => "Superior");
 
 room_type03 = RoomType.create(:name => "Balcony");
 
-#---------------------------------------------------------------------------------
+#-----RoomTypeFeature-----
 
 room_type_feature01 = RoomTypeFeature.create(:name => "Cable TV");
 
@@ -73,19 +73,19 @@ room_type_feature02 = RoomTypeFeature.create(:name => "Bathtub");
 
 room_type_feature03 = RoomTypeFeature.create(:name => "Seaview");
 
-#---------------------------------------------------------------------------------
+#-----RoomTypeFeaturing-----
 
 room_type_featuring01 = RoomTypeFeaturing.create(:room_type_id => 1, :room_type_feature_id => 1);
 
 room_type_featuring02 = RoomTypeFeaturing.create(:room_type_id => 1, :room_type_feature_id => 2);
 
-#---------------------------------------------------------------------------------
+#-----Room-----
 
 room01 = Room.create(:price => 5000.00, :room_type_id => 1);
 
 room01 = Room.create(:price => 2500.00, :room_type_id => 2);
 
-#---------------------------------------------------------------------------------
+#-----RoomAvailableDate-----
 
 room_available_date01 = RoomAvailableDate.create(:room_id => 1);
 
