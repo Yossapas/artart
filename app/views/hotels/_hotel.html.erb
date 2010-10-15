@@ -1,15 +1,15 @@
-<h2><%= link_to hotel.name, hotel %></h2>
-<b>Star : </b> <%= hotel.star %>
-<b>Phone : </b> <%= hotel.phone %>
-
-<p>
-  <%= hotel.description %><br />
-  <% if can? :update, Hotel %>
-    <%= link_to "Edit", edit_hotel_path(hotel) %> | 
-  <% end %>
-  <% if can? :destroy, Hotel %>
-    <%= link_to "Destroy", hotel, :confirm => 'Are you sure?', :method => :delete %>
-  <% end %>
-</p>
-
-<hr />
+<div class="hotel">
+  <h2><%= link_to hotel.name, hotel %></h2>
+  <b>Star : </b> <%= hotel.star %>
+  <b>Phone : </b> <%= hotel.phone %>
+  
+  <p>
+    <%= hotel.description %><br />
+    <% if can? :update, Hotel %>
+      <%= link_to "Edit", edit_hotel_path(hotel) %> | 
+    <% end %>
+    <% if can? :destroy, Hotel %>
+      <%= link_to "Destroy", hotel, :confirm => 'Are you sure?', :method => :delete %>
+    <% end %>
+  </p>
+</div>

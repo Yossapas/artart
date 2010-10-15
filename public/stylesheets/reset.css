@@ -50,3 +50,33 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+
+
+
+h1{
+  font-size: 160%;
+  padding: 0 15px;
+  margin: 0 0 10px 0;
+  color: #333;
+  border-bottom: 1px solid #DDD;
+}
+
+h2{
+  font-size: 130%;
+  margin: 0 0 5px 0;
+  color: #333;
+}
+
+h3{
+  font-size: 110%;
+  color: #888;
+  margin: 5px 0;
+}
+
+h4{
+  font-size: 100%;
+}
+
+p{
+  margin: 5px 0;
+}

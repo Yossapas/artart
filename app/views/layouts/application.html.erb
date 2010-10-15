@@ -2,24 +2,26 @@
 <html>
   <head>
     <title><%= content_for?(:title) ? yield(:title) : "Untitled" %></title>
-    <%= stylesheet_link_tag "reset", "lightbox/jquery.lightbox-0.5", "app" %>
+    <%= stylesheet_link_tag "reset", "lightbox/jquery.lightbox-0.5", "app", "content" %>
     <%= javascript_include_tag "jquery", "jquery.rails", "lightbox/jquery.lightbox-0.5.pack", "application" %>    
     <%= csrf_meta_tag %>
     <%= yield(:head) %>
   </head>
   <body>
+    
     <div id="container">
-      
+      <div id="user_nav">
+        <% if user_signed_in? %>
+          Signed in as <%= current_user.email %>. Not you?
+          <%= link_to "Sign out", destroy_user_session_path %>
+          <% else %>
+          <%= link_to "Sign up", new_user_registration_path %> or <%= link_to "sign in", new_user_session_path %>
+        <% end %>
+      </div><!-- #user_nav -->
+          
       <div id="header">
         
-        <div id="user_nav">
-          <% if user_signed_in? %>
-            Signed in as <%= current_user.email %>. Not you?
-            <%= link_to "Sign out", destroy_user_session_path %>
-          <% else %>
-            <%= link_to "Sign up", new_user_registration_path %> or <%= link_to "sign in", new_user_session_path %>
-          <% end %>
-        </div><!-- #user_nav -->
+        
           
         <ul id="tabs">
           <li><%= link_to "Hotel", hotels_path %></li>

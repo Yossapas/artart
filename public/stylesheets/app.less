@@ -2,19 +2,22 @@
 
 @frame: 1px solid #555;
 @tabs_active_color: #999;
+@body_color: #FFF;
 
 .standard_font(@color: #FFCC00){
-  color: #BBB;
-  font-size: 13px;
+  color: #444;
+  font-family: Verdana, Helvetica, Arial;
+  font-size: 0.9em;
 }
 
 
 /* Stylesheet */
 
 body{
-  background-color: #4B7399;
-  font-family: Verdana, Helvetica, Arial;
-  font-size: 14px;
+  background-color: #4B7399;  
+  .standard_font;
+  padding: 0;
+  margin: 0;
 }
 
 .clear {
@@ -26,15 +29,13 @@ body{
 #container {
   width: 900px;
   margin: 0 auto;
-  background-color: #FFF;
-  /*padding: 20px 40px;*/
-  border: solid 1px black;
-  margin-top: 20px;
+  padding: 30px 0;  
+  position: relative;
 }
 
 #header{  
-  background: #DDD;
-  padding: 0;
+  background: @body_color;
+  padding: 10px 10px 0 10px;
   margin: 0;
   overflow: auto;
   overflow-x: hidden;
@@ -42,17 +43,20 @@ body{
 }
 
 #user_nav{
-  margin: 5px;
-  float: right;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: #FFF;
+  padding: 5px;
 }
 
 #tabs{
   list-style: none;  
-  padding: 0 5px;
+  padding: 0 15px;
   overflow: auto;
   overflow-x: hidden;
   overflow-y: hidden;
-  border-bottom: 2px solid @tabs_active_color;
+  border-bottom: 4px solid @tabs_active_color;
 
   li{
     
@@ -74,15 +78,13 @@ body{
 }
 
 #body{
-  border: 1px solid #AAA;
-  padding: 10px;
-  margin: 5px;
+  background: @body_color;  
+  padding: 30px 10px 20px 10px; 
 }
 
 #foot{
-  border: 1px solid #AAA;
-  padding: 10px;
-  margin: 5px;  
+  background: @body_color;  
+  padding: 10px;  
   .standard_font;  
 }
 
