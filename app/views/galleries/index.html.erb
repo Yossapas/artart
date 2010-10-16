@@ -1,23 +1,6 @@
 <% title "Galleries" %>
 
-<% for gallery in @galleries %>
-
-  <% if can? :update, Gallery %>
-    <%= link_to gallery.name, gallery %>
-  <% else %>
-    <%= gallery.name %>
-  <% end %>
-  <p>
-    <% if can? :update, Gallery %>
-      <%= link_to "Edit", edit_gallery_path(gallery) %> | 
-    <% end %>
-    <% if can? :destroy, Gallery %>
-      <%= link_to "Destroy", gallery, :confirm => 'Are you sure?', :method => :delete %>
-    <% end %>
-  </p>
-  <hr />
-  
-<% end %>
+<%= render @galleries %>
 
 <% if can? :create, Gallery %>
   <p><%= link_to "New Gallery", new_gallery_path %></p>

@@ -50,7 +50,7 @@
   <h3><%= @hotel.name%>'s Gallery</h3>
   
   <% if !(@hotel.gallery.gallery_items == []) %>
-    <%= render :partial => '/galleries/gallery', :locals => {:gallery => @hotel.gallery} %>
+    <%= render :partial => '/hotels/gallery', :locals => {:gallery => @hotel.gallery} %>
   <% else %>
     <% if can? :update, Gallery %>
       <p>Don't have any photos <%= link_to "Add Photo", @hotel.gallery %></p>

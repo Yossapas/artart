@@ -1,5 +1,6 @@
-1287129674
+1287216467
 Ability	/home/phuketschool/dev/ror/artart/app/models/ability.rb	class Ability
+AddAttachmentAvatarToHotel	/home/phuketschool/dev/ror/artart/db/migrate/20101015080449_add_attachment_avatar_to_hotel.rb	class AddAttachmentAvatarToHotel 
 AddAttachmentPhotoToGalleryItem	/home/phuketschool/dev/ror/artart/db/migrate/20101007095620_add_attachment_photo_to_gallery_item.rb	class AddAttachmentPhotoToGalleryItem 
 AddRolesMaskToUser	/home/phuketschool/dev/ror/artart/db/migrate/20101007104258_add_roles_mask_to_user.rb	class AddRolesMaskToUser 
 Application	/home/phuketschool/dev/ror/artart/config/application.rb	  class Application 
@@ -112,6 +113,7 @@ down	/home/phuketschool/dev/ror/artart/db/migrate/20101007082524_create_gallery_
 down	/home/phuketschool/dev/ror/artart/db/migrate/20101007095620_add_attachment_photo_to_gallery_item.rb	  def self.down
 down	/home/phuketschool/dev/ror/artart/db/migrate/20101007101656_devise_create_users.rb	  def self.down
 down	/home/phuketschool/dev/ror/artart/db/migrate/20101007104258_add_roles_mask_to_user.rb	  def self.down
+down	/home/phuketschool/dev/ror/artart/db/migrate/20101015080449_add_attachment_avatar_to_hotel.rb	  def self.down
 edit	/home/phuketschool/dev/ror/artart/app/controllers/galleries_controller.rb	  def edit
 edit	/home/phuketschool/dev/ror/artart/app/controllers/gallery_items_controller.rb	  def edit
 edit	/home/phuketschool/dev/ror/artart/app/controllers/hotel_features_controller.rb	  def edit
@@ -277,6 +279,7 @@ up	/home/phuketschool/dev/ror/artart/db/migrate/20101007082524_create_gallery_it
 up	/home/phuketschool/dev/ror/artart/db/migrate/20101007095620_add_attachment_photo_to_gallery_item.rb	  def self.up
 up	/home/phuketschool/dev/ror/artart/db/migrate/20101007101656_devise_create_users.rb	  def self.up
 up	/home/phuketschool/dev/ror/artart/db/migrate/20101007104258_add_roles_mask_to_user.rb	  def self.up
+up	/home/phuketschool/dev/ror/artart/db/migrate/20101015080449_add_attachment_avatar_to_hotel.rb	  def self.up
 update	/home/phuketschool/dev/ror/artart/app/controllers/galleries_controller.rb	  def update
 update	/home/phuketschool/dev/ror/artart/app/controllers/gallery_items_controller.rb	  def update
 update	/home/phuketschool/dev/ror/artart/app/controllers/hotel_features_controller.rb	  def update

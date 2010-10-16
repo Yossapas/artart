@@ -19,10 +19,10 @@
 
 <% end %>
 
-<%# if can? :update, GalleryItem %>
+<% if can? :new, GalleryItem %>
   <h4>Add Photo</h4>
   <%= render :partial => '/gallery_items/form' %>
-<%# end %>
+<% end %>
 
 <p>
   <% if can? :update, Gallery %>

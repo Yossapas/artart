@@ -1,4 +1,4 @@
-/* Methods & Variables */
+/*    Methods & Variables   */
 
 @frame: 1px solid #555;
 @tabs_active_color: #999;
@@ -11,7 +11,7 @@
 }
 
 
-/* Stylesheet */
+/*    Stylesheet    */
 
 body{
   background-color: #4B7399;  
@@ -31,61 +31,6 @@ body{
   margin: 0 auto;
   padding: 30px 0;  
   position: relative;
-}
-
-#header{  
-  background: @body_color;
-  padding: 10px 10px 0 10px;
-  margin: 0;
-  overflow: auto;
-  overflow-x: hidden;
-  overflow-y: hidden;
-}
-
-#user_nav{
-  position: absolute;
-  top: 0;
-  right: 0;
-  background: #FFF;
-  padding: 5px;
-}
-
-#tabs{
-  list-style: none;  
-  padding: 0 15px;
-  overflow: auto;
-  overflow-x: hidden;
-  overflow-y: hidden;
-  border-bottom: 4px solid @tabs_active_color;
-
-  li{
-    
-    float: left;
-    
-    a:link, a:visited, a:hover, a:active{
-      display: block;
-      background: green;
-      margin: 0 3px 0 0;
-      padding: 5px 7px;
-      color: #FFF;
-      text-decoration: none;
-    }
-    a:hover{
-      background: @tabs_active_color;
-      color: #444;
-    }
-  }
-}
-
-#body{
-  background: @body_color;  
-  padding: 30px 10px 20px 10px; 
-}
-
-#foot{
-  background: @body_color;  
-  padding: 10px;  
-  .standard_font;  
 }
 
 #flash_notice, #flash_error, #flash_alert {
@@ -134,3 +79,71 @@ body{
 .error_messages ul {
   margin: 0;
 }
+
+
+/*    Head    */
+
+#header{  
+  background: @body_color;
+  padding: 10px 10px 0 10px;
+  margin: 0;
+  overflow: auto;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+#user_nav{
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: #FFF;
+  padding: 5px;
+}
+
+#tabs{
+  list-style: none;  
+  padding: 0 15px;
+  overflow: auto;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  border-bottom: 4px solid @tabs_active_color;
+
+  li{
+    
+    float: left;
+    
+    a:link, a:visited, a:hover, a:active{
+      display: block;
+      background: green;
+      margin: 0 3px 0 0;
+      padding: 5px 7px;
+      color: #FFF;
+      text-decoration: none;
+    }
+    a:hover{
+      background: @tabs_active_color;
+      color: #444;
+    }
+  }
+}
+
+
+/*    Body    */
+
+#body{
+  background: @body_color;  
+  padding: 30px 10px 20px 10px; 
+}
+
+
+/*    Foot   */
+
+#foot{
+  background: @body_color;  
+  padding: 10px;  
+  .standard_font;  
+}
+
+
+
+
